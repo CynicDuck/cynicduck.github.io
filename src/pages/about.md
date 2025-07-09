@@ -1,37 +1,38 @@
 ---
 layout: ../layouts/AboutLayout.astro
-title: "About"
+title: ""
 ---
 
-AstroPaper is a minimal, accessible and SEO-friendly blog theme built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
+## **Software Engineer at INBREIN, Seoul, Korea**
 
-![Astro Paper](public/astropaper-og.jpg)
+### MLOps Platform for Machine Learning Production at MetLife
 
-AstroPaper provides a solid foundation for blogs, or even portfolios\_ with full markdown support, built-in dark mode, and a clean layout that works out-of-the-box.
+_Apr. 2025 ~ Jul. 2025_
 
-The blog posts in this theme also serve as guides, docs or example articles\_ making AstroPaper a flexible starting point for your next content-driven site.
+Implemented a full-cycle MLOps platform using Azure ML SDK and Azure DevOps pipelines, covering data preparation, model training, deployment to an inference server, and live model monitoring in production.
 
-## Features
+> 🛠️ `Python`  /  `Azure Machine Learning` /  `Azure DevOps`  /  `Excalidraw`
 
-AstroPaper comes with a set of useful features that make content publishing easy and effective:
+### User Interface for Cloud-Ready Pseudonymization Solution at MetLife
 
-- SEO-friendly
-- Fast performance
-- Light & dark mode
-- Highly customizable
-- Organizable blog posts
-- Responsive & accessible
-- Static search with [PageFind](https://pagefind.app/)
-- Automatic social image generation
+_Jan. 2025 ~ Apr. 2025_
 
-and so much more.
+Developed a React single-page application with D3.js visualizations to guide users in exploring and applying pseudonymization over raw financial data for safe utilization on cloud.
 
-## Show your support
+> 🛠️ `React`  /  `D3.js`  /  `Spring Framework`  /  `Hibernate`  /  `Azure DevOps`
 
-If you like [AstroPaper](https://github.com/satnaing/astro-paper), consider giving it a star ⭐️.
+### Scheduled MLOps Deployment Pipeline Using Azure ML & GitHub Actions
 
-Found a bug 🐛 or have an improvement ✨ in mind? Feel free to open an [issue](https://github.com/satnaing/astro-paper/issues), submit a [pull request](https://github.com/satnaing/astro-paper/pulls) or start a [discussion](https://github.com/satnaing/astro-paper/discussions).
+_Oct. 2024 ~ Nov. 2024_
 
-If you find this theme helpful, you can also [sponsor me on GitHub](https://github.com/sponsors/satnaing) or [buy me a coffee](https://buymeacoffee.com/satnaing) to show your support — every penny counts.
+Engineered a containerized AutoML deployment pipeline using Azure ML CLI and GitHub Actions with secure cloud-based authentication and scheduling.
 
-Kyay zuu! 🙏🏼
+> 🛠️ `GitHub Action`  /  `Azure Machine Learning`  /  `Docker`  /  `Azure Container Registry`
+
+### Microsoft Teams eDMS Application Development
+
+_Dec. 2023 ~ Oct. 2024_
+
+Developed and demoed a Blazor-based eDMS application integrated with Azure APIs and Teams, leading to submission for the Teams Marketplace.
+
+> 🛠 `Blazor`  /  `Microsoft SQL Server`  /  `Azure EntraID`  /  `Azure App Service`
