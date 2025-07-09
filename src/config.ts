@@ -1,7 +1,7 @@
 export const SITE = {
-  website: "https://cynicowl.github.io", 
+  website: "https://cynicdog.github.io", 
   author: "eunsang",
-  profile: "https://github.com/CynicOwl",
+  profile: "https://github.com/CynicDog",
   desc: "A swimming pool with many waters",
   title: "CynicDog",
   ogImage: "astropaper-og.jpg",
