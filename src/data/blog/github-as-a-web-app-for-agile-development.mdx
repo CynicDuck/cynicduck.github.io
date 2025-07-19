@@ -52,11 +52,9 @@ GitHub is the UI. GitHub is the state store. GitHub is the backend. You can auto
 
 The conventions it encourages are simple: 
 
-- Always run unit tests before merging
-- Prefer code review before integration
-- Treat environments as citizens: dev, stage, and prod
-- Automate workflows using comments and labels
-- Let Issues represent the start — and deletion represent the end
+1. Perform unit tests over the source code push. Passing the code is the minimum obligation for developers.  
+2. Code reviews are strongly recommended. Share and understand the intention of the codes.  
+3. Source code management per target environment and CI/CD per target environment (whether it be the famous three-tier environment scheme — dev, stage, prod — or a monolithic scheme).
 
 Everything is event-driven and in one place.
 
