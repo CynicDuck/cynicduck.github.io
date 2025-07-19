@@ -1,0 +1,68 @@
+---
+title: GitHub as a Web Application for Agile Development
+author: eunsang
+pubDatetime: 2025-07-18T12:00:00Z
+modDatetime: 2025-07-18T12:00:00Z
+slug: github-as-a-web-app-for-agile-development
+featured: false
+draft: false
+tags: [devops, agile, github-actions]
+description: Rethinking GitHub as not just a code host, but a full agile platform powered by Issues, Labels, and Actions.
+---
+
+import ExcalidrawSVG from '../../components/ExcalidrawSVG.astro';
+import GitFlow from '../../assets/git-flow.svg';
+import GitFlowProcess from '../../assets/git-flow-process.svg';
+
+Everyone knows GitHub as the default source code platform. It’s where pull requests live, branches are born, and collaboration happens. But what if we pushed it further — beyond just a code host, into something closer to a **web application for Agile development**?
+
+This idea hit me after working on a field project where our team collaborated with a client company. Agile methodology was at the center of it — Stories, fast iteration, continuous communication. Requirements shifted by the hour, meetings were constant, and the branching strategy reflected the Agile complexity: `main` for production, `development` for internal QA, and `stage` for external validation. Managing all this wasn’t easy — especially when traditional PM tools (like Jira) felt disconnected from the actual place we shipped code: GitHub.
+
+Eventually, I got used to the rhythm of Agile, and began to see the value behind the ceremony. But what stood out most was how **disconnected** tooling can get. Jira knew about Stories. GitHub knew about branches. CI/CD pipelines knew about builds. But they didn’t talk well to each other — and the mental overhead added up.
+
+That’s where the idea for **Agile GitHub Starter** came from.
+
+GitHub already offers a robust UI. It lets us create **Issues**, which can stand in for “Stories.” It lets us define **Labels**, which we can use to signal special workflows (like hotfixes). Most importantly, GitHub Actions gives us a programmable runtime — a place to listen to events, trigger automations, and interact with GitHub’s REST API.
+
+So I thought: what if we built a minimal Agile platform using just GitHub?
+
+I started simple: create an Issue, and let that trigger a branch. If the Issue is labeled `hotfix`, then a `hotfix/issue-42` branch is created. Otherwise, we get a `feature/issue-42` branch — ready for development. From there, it’s just Git — commit, push, open a PR. 
+
+<ExcalidrawSVG
+  src={GitFlow}
+  alt=""
+  caption=""
+/>
+
+When a pull request is opened to `main`, a bot leaves a comment. That comment lays out the conventions: merge to `development` first, build and deploy, then move on to `stage`, and finally to `main`. The whole flow is CI/CD-aware and environment-aware. Developers trigger deployments by leaving comments like `deploy for staging`. Each comment maps to a GitHub Actions workflow.
+
+<ExcalidrawSVG
+  src={GitFlowProcess}
+  alt=""
+  caption=""
+/>
+
+None of this magic would be possible without two features: **trigger events** and **GitHub’s REST API**. The first lets us hook into moments like when an Issue is opened, when a PR is created, or when a branch is deleted. The second gives us full CRUD over GitHub’s resources: we can create comments, trigger workflows, merge PRs, apply labels — anything.
+
+This turns GitHub into not just a source of truth, but also an **engine of execution.** 
+
+GitHub is the UI. GitHub is the state store. GitHub is the backend. You can automate development workflows end-to-end — without reaching for an external project manager, ticketing system, or deployment tool. That’s the heart of Agile GitHub Starter. It doesn’t try to replace Jira or CircleCI. It’s not bloated. It’s not strict. It’s a template — a pattern — for how you might wire up GitHub to behave like a full-featured Agile platform.
+
+The conventions it encourages are simple:
+
+- Always run unit tests before merging
+- Prefer code review before integration
+- Treat environments as citizens: dev, stage, and prod
+- Automate workflows using comments and labels
+- Let Issues represent the start — and deletion represent the end
+
+Everything is event-driven and in one place.
+
+The result is a cleaner, tighter Agile loop — one where your devs don’t have to context-switch between six tools. GitHub can be the center of gravity.
+
+That doesn’t mean this template has everything you need. But it shows that GitHub can do **much more than host code**. It can host your process too.
+
+And once you start thinking of GitHub this way — as a real platform — you begin to see just how much of Agile you can build **without leaving the repo.**
+
+---
+🚀 Try it out: [Agile GitHub Starter](https://github.com/CynicDog/agile-github-starter)
